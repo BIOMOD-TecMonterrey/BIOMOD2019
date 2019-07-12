@@ -1,0 +1,784 @@
+<html>
+    <head>
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!----------------------------------------------- Esto va en todas las paginas --------------------------------------------->
+<!------------- Llama todo el css necesario y tiene la función de javascript para llamar al header y footer ---------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+        <title>BIOMOD 2019 Tec de Monterrey</title>
+        <link href="css/reset.css" rel="stylesheet"/>
+        <link href="css/style.css" rel="stylesheet"/>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="css/bootstrapmin.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></script>
+        <script>
+            $(function(){
+                $("#div_header").load("header.html");
+                $("#div_footer").load("footer.html");
+            });
+        </script>
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+
+        <style>
+            /****************************************** Change Wiki **************************************/
+            #globalWrapper, #content, #HQ_page, #bodyContent, #mw-content-text{
+                height: 100%;
+            }
+            /************************************************ Custom CSS **************************************/
+            #teamMembers{
+              background: rgb(248,247,246);
+            }
+            .containerMembers{
+              width: 92%;
+              display: flex;
+              flex-wrap: wrap;
+              margin: 5px auto 0 auto;
+              padding-bottom: 20px;
+              justify-content: center;
+            }
+            .member {
+              transition: 0.4s;
+              margin: 10px 10px 0 10px;
+              padding: 10px 10px 20px 10px;
+              text-align: center;
+              font-weight: 700;
+            }
+            .photo {
+              width: 16vw;
+              height: 20vw;
+              border-radius: 5%;
+              box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+              transition: all 0.4s;
+              background: #888;
+              -webkit-filter: grayscale(100%);
+              filter: grayscale(100%);
+            }
+            .member:hover {
+              cursor: pointer;
+              text-decoration: underline;
+              transform: scale(1.3,1.3);
+              z-index: 20;
+            }
+            .member:hover .photo {
+              border-radius: 5%;
+              -webkit-filter: grayscale(0%);
+              filter: grayscale(0%);
+            }
+            /************************************************** Popup  ********************************************/
+            .popupBackground {
+              position: fixed;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              background: white;
+              opacity: 0;
+              transition: all 0.2s;
+              z-index: 98;
+              display: none;
+            }
+            .popupWrapper {
+              opacity: 0;
+              width: 100%;
+              height: 100%;
+              position: fixed;
+              transition: all 0.2s;
+              top: 0;
+              left: 0;
+              text-align: center;
+              display: flex;
+              overflow: auto;
+              z-index: 99;
+              display: none;
+            }
+            .popupContentLeft {
+              height: 100%;
+              display: inline-block;
+              width: 20%;
+              left: 0;
+              position: fixed;
+            }
+            .popupContentRight {
+              height: 100%;
+              display: inline-block;
+              width: 20%;
+              right: 0;
+              position: fixed;
+            }
+            .popupBox {
+              width: 60%;
+              height: fit-content;
+              color: black;
+              padding: 20px 20px;
+              position: relative;
+              margin: 10px auto;
+            }
+            .popupContent {
+              opacity: 0;
+              display: inline-block;
+              outline: none;
+              transition: all 0.2s;
+              text-align: left;
+              vertical-align: middle;
+              display: none;
+              font-size: 0.8em;
+            }
+            .popupContent a {
+              font-size: 1.5em;
+              color: #002ba8;
+            }
+            .closeButton {
+              position: absolute;
+              right: 0;
+              border: none;
+              background: transparent;
+              cursor: pointer;
+              font-size: 1.5em;
+              transition: all 0.2s;
+            }
+            .closeButton:hover {
+              transform: scale(1.5,1.5);
+            }
+            .popupImage {
+              display: block;
+              width: 30%;
+              margin-left: auto;
+              margin-right: auto;
+              border-radius: 10%;
+            }
+            .blurredBackground {
+              -webkit-filter: blur(8px);
+              filter: blur(8px);
+            }
+            /*************************************************** Photos *******************************************/
+            #Esteban {
+              background: url(/images/team/esteban.jpg);
+              background-size: 100%;
+            }
+            #Alma {
+              background: url(/images/team/alma.jpg);
+              background-size: 100%;
+            }
+            #Isaac {
+              background: url(/images/team/isaac.jpg);
+              background-size: 100%;
+            }
+            #Adri {
+              background: url(/images/team/adri.jpg);
+              background-size: 100%;
+            }
+            #Eddie {
+              background: url(/images/team/eddie.jpg);
+              background-size: 100%;
+            }
+            #Chema {
+              background: url(/images/team/chema.jpg);
+              background-size: 100%;
+            }
+            #Isaacjr {
+              background: url(/images/team/isaacjr.jpg);
+              background-size: 100%;
+            }
+            #Omar {
+              background: url();
+              background-size: 100%;
+            }
+            #Edgar {
+              background: url(/images/team/edgar.jpg);
+              background-size: 100%;
+            }
+            #Efrain {
+              background: url();
+              background-size: 100%;
+            }
+            #Jose {
+              background: url(/images/team/jose.jpg);
+              background-size: 100%;
+            }
+            #Alex {
+              background: url(/images/team/alex.jpg);
+              background-size: 100%;
+            }
+            #Alan {
+              background: url(/images/team/alan.jpg);
+              background-size: 100%;
+            }
+            #Ivonne {
+              background: url();
+              background-size: 100%;
+            }
+
+            @media screen and (max-width: 900px) {
+              .photo {
+                width: 20vw;
+                height: 25vw;
+              }
+              .member {
+                padding: 10px 10px 10px 10px;
+                font-size: 2.5vw;
+              }
+            }
+            .sponsor-container {
+              width:100%;
+              height: auto;
+              padding: 1%;
+            }
+            .sponsor-container img {
+              width: 40%;
+              float: left;
+              margin:0;
+              padding: 5px;
+            }
+            .sponsor-container .sponsor-title {
+              width:60%;
+              float: right;
+              text-align: justify;
+              font-size: 2vw;
+              padding: 3%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="div_header" display="contents"></div>
+        <!-- Header -->
+          <header class="masthead" id="header">
+              <div class="header-top" style="background-image: url('/images/team/header.jpg'); background-position-x: center; background-size: cover;">
+              </div>
+              <div class="header-bottom">  
+                  <div class="div-header-bottom">
+                  <div class="header-title">
+                      Team
+                  </div>
+                  <div class="header-subtitle">
+                      Learn about us
+                  </div>
+                  </div>
+              </div>
+          </header>
+
+          <!-- Team Members -->
+          <section id="teamMembers">
+            <div class="body-title" style="background: rgb(243,242,241);">
+            Team Members
+            </div>
+            <div class="containerMembers">
+              <div class="member" onclick="openPopup(wrapperAlma, backgroundAlma, contentAlma)">
+                <div class="photo" id="Alma">
+                </div>
+                Alma
+              </div>
+              <div class="member" onclick="openPopup(wrapperEddie, backgroundEddie, contentEddie)">
+                <div class="photo" id="Eddie">
+                </div>
+                Eddie
+              </div>
+              <div class="member" onclick="openPopup(wrapperChema, backgroundChema, contentChema)">
+                <div class="photo" id="Chema">
+                </div>
+                Chema
+              </div>
+              <div class="member" onclick="openPopup(wrapperIsaac, backgroundIsaac, contentIsaac)">
+                <div class="photo" id="Isaac">
+                </div>
+                Isaac
+              </div>
+              <div class="member" onclick="openPopup(wrapperIsaacjr, backgroundIsaacjr, contentIsaacjr)">
+                <div class="photo" id="Isaacjr">
+                </div>
+                Isaac Jr
+              </div>
+              <div class="member" onclick="openPopup(wrapperEdgar, backgroundEdgar, contentEdgar)">
+                <div class="photo" id="Edgar">
+                </div>
+                Edgar
+              </div>
+              <div class="member" onclick="openPopup(wrapperAdri, backgroundAdri, contentAdri)">
+                <div class="photo" id="Adri">
+                </div>
+                Adri
+              </div>
+              <div class="member" onclick="openPopup(wrapperJose, backgroundJose, contentJose)">
+                <div class="photo" id="Jose">
+                </div>
+                Jose Ge
+              </div>
+            </div>
+          </section>
+
+          <section id="pis">
+            <div class="body-title" style="background: rgb(243,242,241);">
+            Primary PI's
+            </div>
+            <div class="containerMembers">
+              <div class="member" onclick="openPopup(wrapperEfrain, backgroundEfrain, contentEfrain)">
+                <div class="photo" id="Efrain">
+                </div>
+                Efrain  
+              </div>
+              <div class="member" onclick="openPopup(wrapperIvonne, backgroundIvonne, contentIvonne)">
+                <div class="photo" id="Ivonne">
+                </div>
+                Ivonne
+              </div>
+              <div class="member" onclick="openPopup(wrapperOmar, backgroundOmar, contentOmar)">
+                <div class="photo" id="Omar">
+                </div>
+                Omar Lozano
+              </div>
+            </div>
+          </section>
+
+
+          <section id="advisors">
+            <div class="body-title" style="background: rgb(243,242,241);">
+            Advisors
+            </div>
+            <div class="containerMembers">
+              <div class="member" onclick="openPopup(wrapperAlan, backgroundAlan, contentAlan)">
+                <div class="photo" id="Alan">
+                </div>
+                Alan 
+              </div>
+              <div class="member" onclick="openPopup(wrapperAlex, backgroundAlex, contentAlex)">
+                <div class="photo" id="Alex">
+                </div>
+                Alex  
+              </div>
+              <div class="member" onclick="openPopup(wrapperEsteban, backgroundEsteban, contentEsteban)">
+                <div class="photo" id="Esteban">
+                </div>
+                Esteban  
+              </div>
+            </div>
+          </section>
+
+          <section id="collaborators">
+            <div class="body-title" style="background: rgb(243,242,241);">
+            Collaborators
+            </div>
+            <div class="containerMembers">
+              <div class="member" onclick="openPopup(wrapperYvonne, backgroundYvonne, contentYvonne)">
+                <div class="photo" id="Yvonne">
+                </div>
+                Yvonne Cárdenas
+              </div>
+              <div class="member" onclick="openPopup(wrapperDavid, backgroundDavid, contentDavid)">
+                <div class="photo" id="David">
+                </div>
+                David Acevedo
+              </div>
+              <div class="member" onclick="openPopup(wrapperMaritza, backgroundMaritza, contentMaritza)">
+                <div class="photo" id="Maritza">
+                </div>
+                Maritza Reyes
+              </div>
+              <div class="member" onclick="openPopup(wrapperVala, backgroundVala, contentVala)">
+                <div class="photo" id="Vala">
+                </div>
+                Diego I. Valadez
+              </div>
+              <div class="member" onclick="openPopup(wrapperMaru, backgroundMaru, contentMaru)">
+                <div class="photo" id="Maru">
+                </div>
+                María Eugenia Reyna
+              </div>
+              <div class="member" onclick="openPopup(wrapperAdrianCollab, backgroundAdrianCollab, contentAdrianCollab)">
+                <div class="photo" id="AdrianCollab">
+                </div>
+                Adrián Rodríguez
+              </div>
+            </div>
+          </section>
+          
+          <div class="articulo">
+              <section id="collaborations" class="seccion-responsiva">
+                <div class="body-title">Collaborations</div>
+                <div class="body-subtitle">Team Universidad Random</div>
+                <ul>
+                  <li>
+                    <b>Luis Javierodina García, Sergio Alexis Espinoza Benavides.</b>
+                    They helped with the design an18.
+                  </li>
+                </ul>
+              </section>
+              
+              <section id="attributions" class="seccion-responsiva">
+                <div class="body-title">Attributions</div>
+                <div class="body-subtitle">Design Team</div>
+                <ul>
+                  <li>
+                    <b>Luis Javier Treviño Valdez, Braulio Omar Miranda Martínez, Melissa Castillo Almaguer, Erika Morales Toledo, Martha Karina Godina García, Sergio Alexis Espinoza Benavides.</b>
+                    They helped with the design and creation of almost all of the elements found in the Wiki, presentation, poster, social media, and events organized by us. With their vision and creativity, we were able to create an identity to present ourselves towards the general public. Besides, Braulio Miranda was of huge importance for the iGEM National Congress of Science 2018.
+                  </li>
+                </ul>
+                <div class="body-subtitle">Photos and Video Content</div>
+                <ul>
+                  <li>
+                    <b>Enrique García</b> <a href= "https://www.facebook.com/enrique.garcia.37853" target="_blank"><i class="fa fa-facebook-square"></i></a> and <b>Miguel Domínguez</b> <a href= "https://www.facebook.com/miguel.dominguez.9279" target="_blank"><i class="fa fa-facebook-square"></i></a> provided breathtaking shots of our university and city filmed with a drone, content that helped us enormously on social media and Wiki content, such as our Facebook cover video and our homepage video loop. 
+                  </li>
+                  <li>
+                    <b>Content Diffusion Team @ Tec de Monterrey</b>
+                    Many of the pictures that appear on this Wiki were taken with the high-quality equipment of our university's Content Diffusion Team, to whom we say thanks for their time and support on different ocassions.
+                  </li>
+                </ul>
+                <div class="body-subtitle">Wiki</div>
+                <ul>
+                  <li>
+                    <b>David Acevedo Villarreal</b>
+                    Greatly helped the team with the development and functionality of various sections and elements of the wiki. For example, the functionality of menus, navigation mechanics, responsiveness, and other elements, pulling off some all-nighters to ensure our success.
+                  </li>
+                  <li>
+                    The slideshow images and videos on this wiki were implemented using adapted code from the <b><a href="http://2018.igem.org/Team:Purdue" target="_blank">2018 Purdue</a></b> team.
+                  </li>
+                </ul>
+              </section>
+              
+              <section id="sponsors" class="seccion-responsiva">
+                <div class="body-title">Sponsors</div>
+                <div class="sponsor-container">
+                  <img src="http://2018.igem.org/wiki/images/2/24/T--Tec-Monterrey--Opentrons.png" alt="Opentrons">
+                  <div class="sponsor-title"><b><a href="https://opentrons.com/">Opentrons</a></b> is a company dedicated to make robots for biologists. We want to thank oprentrons by providing us with a OT-2 Pippeting robot, which allowed us to acomplish our objetives in the characterization of new parts.</div>
+                  <br class="clearBoth">
+                </div>
+                <div class="sponsor-container">
+                  <img src="http://2018.igem.org/wiki/images/a/a2/T--Tec-Monterrey--CONANP.png" alt="CONANP">
+                  <div class="sponsor-title"><b><a href="https://www.gob.mx/conanp">CONANP</a></b> With the priceless help of CONANP,  our Human Practices Journey could be realized. They spent two months, gathering information about the coordinates of the specific points of analysis. They also facilitate dates, times and roads for the journey to be efficient and as productive as possible.</div>
+                  <br class="clearBoth">
+                </div>
+                <div class="sponsor-container">
+                  <img src="http://2018.igem.org/wiki/images/5/56/T--Tec-Monterrey--CECROPIA.png" alt="Cecropia" style="background: grey; border-radius: 30px;">
+                  <div class="sponsor-title"><b><a href="http://www.cecropia.org/index2.html">Cecropia</a></b> was a key sponsor because of their help and advice for our Human Practices. They provided us the locations of the samples and gave us valuable council before, during and after the sample gathering.</div>
+                  <br class="clearBoth">
+                </div>
+                <div class="sponsor-container">
+                  <img src="http://2018.igem.org/wiki/images/4/43/T--Tec-Monterrey--Concretos.png" alt="Concretos Modernos">
+                  <div class="sponsor-title"><b><a href="http://www.concretosmodernos.com.mx/">Concretos Modernos</a></b> Another sponsor for Human Practices that provided priceless help planning the sample gathering. Gave us valuable council.</div>
+                  <br class="clearBoth">
+                </div>
+                <div class="sponsor-container">
+                  <img src="http://2018.igem.org/wiki/images/8/89/T--Tec-Monterrey--GDX.png" alt="GDX Holdings">
+                  <div class="sponsor-title"><b><a href="http://www.gdx.io/">GDX Holdings</a></b> We want to thank GDX Holdings their financial support which facilitated our stay in Boston for the Giant Jamboree.</div>
+                  <br class="clearBoth">
+                </div>
+                <div class="sponsor-container">
+                  <img src="http://2018.igem.org/wiki/images/5/5e/T--Tec-Monterrey--NEB.png" alt="New England Biolabs">
+                  <div class="sponsor-title"><b><a href="https://international.neb.com/">New England Biolabs</a></b> We would not be able to carry out many protocols with out the BioBrick® Assembly Kit provided by New England Biolabs.</div>
+                  <br class="clearBoth">
+                </div>
+                <div class="sponsor-container">
+                  <img src="http://2018.igem.org/wiki/images/6/6b/T--Tec-Monterrey--Ladesa2.png">
+                  <div class="sponsor-title"><b><a href="http://www.ladesa.com/">LADESA</a></b> We want to thank Ladesa for making possible the attendance of a team member to the Giant Jamboree by a financial support.</div>
+                  <br class="clearBoth">
+                </div>
+                <div class="sponsor-container">
+                  <img src="http://2018.igem.org/wiki/images/3/3c/T--Duesseldorf--snapgene.png" alt="SnapGene">
+                  <div class="sponsor-title"><b><a href="https://www.snapgene.com/">SnapGene</a></b> We were able to have a digital view of our sequences and make improvements on them thank to the software licenses provided by SnapGene.</div>
+                  <br class="clearBoth">
+                </div>
+                <div class="sponsor-container">
+                  <img src="http://2018.igem.org/wiki/images/f/f2/T--Tec-Monterrey--Amexcid_Logo.png" alt="AMEXCID">
+                  <div class="sponsor-title"><b><a href="https://www.gob.mx/amexcid">Agencia Mexicana de Cooperación Internacional para el Desarrollo</a></b> provided the team with financig for the journey to Boston.</div>
+                  <br class="clearBoth">
+                </div>
+              </section>
+          </div>
+
+<!---------------------------------------------------------- Pop Ups ------------------------------------------------------>
+<!---------------------------------------------------------- Alma ------------------------------------------------------>
+  <div class="popupBackground" id="backgroundAlma">
+  </div>
+  <div class="popupWrapper" id="wrapperAlma">
+    <div class="popupContentLeft" onclick="closePopup(wrapperAlma, backgroundAlma, contentAlma)"></div>
+    <div class="popupBox popupContent" id="contentAlma">
+      <button id="closeAlma" class="closeButton" onclick="closePopup(wrapperAlma, backgroundAlma, contentAlma)">
+        <i class="fa fa-times"></i>
+      </button>
+      <img class="popupImage" src="/images/team/alma.jpg">
+      <b>Alma <a href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin-square"></i></a></b>
+      (Biotechnology)
+      <br>
+      <i>Team Leader</i>
+      <br>
+
+      Born into the deepest hoods of Torreón (La Laguna) and currently studying in Monterrey as a senior in nanotechnology engineering and chemistry science, I’m proudly participant of iGEM Tec-Monterrey team. One of my passions is science dissemination and the interdisciplinary interaction of different careers and vocations in it. My goal in life is to get the enough resources to help people to self-fulfill their dreams and to enhance their quality of life. My hobbies are: languages learning and hanging around/walking in new places. As random fact before dedicating completely to science I was a street skateboarder for around 8 years. Hope to see you at Boston soon!
+
+    </div>
+    <div class="popupContentRight" onclick="closePopup(wrapperAlma, backgroundAlma, contentAlma)"></div>
+  </div>
+<!---------------------------------------------------------- Adri ------------------------------------------------------>
+  <div class="popupBackground" id="backgroundAdri">
+  </div>
+  <div class="popupWrapper" id="wrapperAdri">
+    <div class="popupContentLeft" onclick="closePopup(wrapperAdri, backgroundAdri, contentAdri)"></div>
+    <div class="popupBox popupContent" id="contentAdri">
+      <button id="closeAdri" class="closeButton" onclick="closePopup(wrapperAdri, backgroundAdri, contentAdri)">
+        <i class="fa fa-times"></i>
+      </button>
+      <img class="popupImage" src="/images/team/adri.jpg">
+      <b>Adri <a href= "https://www.linkedin.com/in/" target="_blank"><i class="fa fa-linkedin-square"></i></a></b>
+      (Biotechnology)
+      <br>
+      <i>Wet Lab / Dry Lab </i>
+      <br>
+      Hi! My name is Nufo. I am a student of Biotechnology. I like a lot reading about genetic engineering. I am a hardworking person and I am the best making memes. Being part of iGEM Tec-Monterrey team is for me an honor. I am sure the synthetic biology is a big step the world is giving to a revolutionary world.   </div>
+    <div class="popupContentRight" onclick="closePopup(wrapperAdri, backgroundAdri, contentAdri)"></div>
+  </div>
+<!---------------------------------------------------------- Chema ------------------------------------------------------>
+  <div class="popupBackground" id="backgroundChema">
+  </div>
+  <div class="popupWrapper" id="wrapperChema">
+    <div class="popupContentLeft" onclick="closePopup(wrapperChema, backgroundChema, contentChema)"></div>
+    <div class="popupBox popupContent" id="contentChema">
+      <button id="closeChema" class="closeButton" onclick="closePopup(wrapperChema, backgroundChema, contentChema)">
+        <i class="fa fa-times"></i>
+      </button>
+      <img class="popupImage" src="/images/team/chema.jpg">
+      <b>Chema</b>
+      (Nanotechnology)
+      <br>
+      <i>Wet Lab / Dry Lab</i>
+      <br>
+      Hi! My name is Victor, Im 23 years old, and I study Biotechnology Engineering at Tec de Monterrey. I love science.
+    </div>
+    <div class="popupContentRight" onclick="closePopup(wrapperChema, backgroundChema, contentChema)"></div>
+  </div>
+<!---------------------------------------------------------- Eddie ------------------------------------------------------>
+  <div class="popupBackground" id="backgroundEddie">
+  </div>
+  <div class="popupWrapper" id="wrapperEddie">
+    <div class="popupContentLeft" onclick="closePopup(wrapperEddie, backgroundEddie, contentEddie)"></div>
+    <div class="popupBox popupContent" id="contentEddie">
+      <button id="closeEddie" class="closeButton" onclick="closePopup(wrapperEddie, backgroundEddie, contentEddie)">
+        <i class="fa fa-times"></i>
+      </button>
+      <img class="popupImage" src="/images/team/eddie.jpg">
+      <b>Eddie <a href= "https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin-square"></i></a></b>
+      (Nanotechnology)
+      <br>
+      <i>Wet Lab</i>
+      <br>
+      Hi! My name is Ana. I am from Panama, but now I am studying in Mexico the bachelor of Nanotechnology and Chemistry Science. I am a hard working person and I like to do my best all the time. I enjoy a lot eating cookies, especially the chocolate ones.
+    </div>
+    <div class="popupContentRight" onclick="closePopup(wrapperEddie, backgroundEddie, contentEddie)"></div>
+  </div>
+<!---------------------------------------------------------- Omar ------------------------------------------------------>
+  <div class="popupBackground" id="backgroundOmar">
+  </div>
+  <div class="popupWrapper" id="wrapperOmar">
+    <div class="popupContentLeft" onclick="closePopup(wrapperOmar, backgroundOmar, contentOmar)"></div>
+    <div class="popupBox popupContent" id="contentOmar">
+      <button id="closeOmar" class="closeButton" onclick="closePopup(wrapperOmar, backgroundOmar, contentOmar)">
+        <i class="fa fa-times"></i>
+      </button>
+      <img class="popupImage" src="">
+      <b>Omar Lozano <a href= "https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin-square"></i></a></b>
+      (Biotechnology)
+      <br>
+      <i>Design </i>
+      <br>
+      Hells  the ang.
+I am a person who enjoys challenge myself to new problems. I believe we can change the word with effort and passion. 
+
+    </div>
+    <div class="popupContentRight" onclick="closePopup(wrapperOmar, backgroundOmar, contentOmar)"></div>
+  </div>
+<!---------------------------------------------------------- Edgar ------------------------------------------------------>
+  <div class="popupBackground" id="backgroundEdgar">
+  </div>
+  <div class="popupWrapper" id="wrapperEdgar">
+    <div class="popupContentLeft" onclick="closePopup(wrapperEdgar, backgroundEdgar, contentEdgar)"></div>
+    <div class="popupBox popupContent" id="contentEdgar">
+      <button id="closeEdgar" class="closeButton" onclick="closePopup(wrapperEdgar, backgroundEdgar, contentEdgar)">
+        <i class="fa fa-times"></i>
+      </button>
+      <img class="popupImage" src="/images/team/edgar.jpg">
+      <b>Edgar</b>
+      (Biotechnology)
+      <br>
+      <i>Wet Lab / Design </i>
+      <br>
+      My name is Samantha Peña, and I'm 18 years old. I'm from Nuevo León, México. I've been a passionate for science since I can remember, and my entire life has turned around this fact. I've always been into the search for a better world. Not only for our generation, but to aim for a better future. I'm kind of a perfectionist and a true hardworker. If I think something is going wrong, even the slightest, I do it over again in order to get the results I was expecting.
+    </div>
+    <div class="popupContentRight" onclick="closePopup(wrapperEdgar, backgroundEdgar, contentEdgar)"></div>
+  </div>
+<!---------------------------------------------------------- Esteban ------------------------------------------------------>
+  <div class="popupBackground" id="backgroundEsteban">
+  </div>
+  <div class="popupWrapper" id="wrapperEsteban">
+    <div class="popupContentLeft" onclick="closePopup(wrapperEsteban, backgroundEsteban, contentEsteban)"></div>
+    <div class="popupBox popupContent" id="contentEsteban">
+      <button id="closeEsteban" class="closeButton" onclick="closePopup(wrapperEsteban, backgroundEsteban, contentEsteban)">
+        <i class="fa fa-times"></i>
+      </button>
+      <img class="popupImage" src="/images/team/esteban.jpg">
+      <b>Esteban de la Peña <a href="https://www.linkedin.com/in/esteban-de-la-pe%C3%B1a-th%C3%A9venet/" target="_blank"><i class="fa fa-linkedin-square"></i></a></b>
+      (Nanotechnology)
+      <br>
+      <i>Web Developer</i>
+      <br>
+      Hello there<a href="http://2018.igem.org/wiki/images/2/23/T--Tec-Monterrey--Se%C3%B1or_Kenobi.jpg" target="_blank">!</a> As the main developer of this wiki, it's an honor to have you reading my description. People call me Esteban, or Steve if you want, I come from the small state of Aguascalientes, but I’ve been living in Monterrey since I was 6, and now I’m 20 years old. I love chemistry, programming, and science in general. I also love to paint digitally, draw <a style="padding: 0;" href="https://www.instagram.com/tev_steve/" target="_blank"><i class="fa fa-instagram"></i></a>, play videogames and hangout with friends.
+      <br>
+      <br>
+My goal in life, and the reason why I love projects like iGEM, is to make science cool and accessible for everyone. This is because I believe that science itself is always benefiting Humanity. Even though some people use it wrong, the net force of science is always <b>forward</b>.
+    </div>
+    <div class="popupContentRight" onclick="closePopup(wrapperEsteban, backgroundEsteban, contentEsteban)"></div>
+  </div>
+<!---------------------------------------------------------- Isaac ------------------------------------------------------>
+  <div class="popupBackground" id="backgroundIsaac">
+  </div>
+  <div class="popupWrapper" id="wrapperIsaac">
+    <div class="popupContentLeft" onclick="closePopup(wrapperIsaac, backgroundIsaac, contentIsaac)"></div>
+    <div class="popupBox popupContent" id="contentIsaac">
+      <button id="closeIsaac" class="closeButton" onclick="closePopup(wrapperIsaac, backgroundIsaac, contentIsaac)">
+        <i class="fa fa-times"></i>
+      </button>
+      <img class="popupImage" src="/images/team/isaac.jpg">
+      <b>Isaac <a href= "https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin-square"></i></a></b>
+      (Nanotechnology)
+      <br>
+      <i>Human Practices / Wet Lab</i>
+      <br>
+Helloo! I'm a student of nanotechnology and chemical sciences. I work at Residencias Tec, the dormitories for students. Being part of an iGEM team was my first approach to molecular biology and multidisciplinary team work. I believe in hard work and lifelong learning. I'm so thankful with the work we've all done during this last year, I hope we find ourselves closer to a future where we apply our abilities and knowledge to make the world a better place. Thank you iGEM for giving us the opportunity to share our experiences in the lab and out of it. 
+    </div>
+    <div class="popupContentRight" onclick="closePopup(wrapperIsaac, backgroundIsaac, contentIsaac)"></div>
+  </div>
+<!---------------------------------------------------------- Isaac Jr ------------------------------------------------------>
+  <div class="popupBackground" id="backgroundIsaacjr">
+  </div>
+  <div class="popupWrapper" id="wrapperIsaacjr">
+    <div class="popupContentLeft" onclick="closePopup(wrapperIsaacjr, backgroundIsaacjr, contentIsaacjr)"></div>
+    <div class="popupBox popupContent" id="contentIsaacjr">
+      <button id="closeIsaacjr" class="closeButton" onclick="closePopup(wrapperIsaacjr, backgroundIsaacjr, contentIsaacjr)">
+        <i class="fa fa-times"></i>
+      </button>
+      <img class="popupImage" src="/images/team/isaacjr.jpg">
+      <b>Isaac Jr<a href= "https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin-square"></i></a></b>
+      (Nanotechnology)
+      <br>
+      <i>Human Practices / Wet Lab</i>
+      <br>
+Helloo! I'm a student of nanotechnology and chemical sciences. I work at Residencias Tec, the dormitories for students. Being part of an iGEM team was my first approach to molecular biology and multidisciplinary team work. I believe in hard work and lifelong learning. I'm so thankful with the work we've all done during this last year, I hope we find ourselves closer to a future where we apply our abilities and knowledge to make the world a better place. Thank you iGEM for giving us the opportunity to share our experiences in the lab and out of it. 
+    </div>
+    <div class="popupContentRight" onclick="closePopup(wrapperIsaacjr, backgroundIsaacjr, contentIsaacjr)"></div>
+  </div>
+<!---------------------------------------------------------- Jose ------------------------------------------------------>
+  <div class="popupBackground" id="backgroundJose">
+  </div>
+  <div class="popupWrapper" id="wrapperJose">
+    <div class="popupContentLeft" onclick="closePopup(wrapperJose, backgroundJose, contentJose)"></div>
+    <div class="popupBox popupContent" id="contentJose">
+      <button id="closeJose" class="closeButton" onclick="closePopup(wrapperJose, backgroundJose, contentJose)">
+        <i class="fa fa-times"></i>
+      </button>
+      <img class="popupImage" src="/images/team/jose.jpg">
+      <b>Jose Ge <a href= "https://mx.linkedin.com/" target="_blank"><i class="fa fa-linkedin-square"></i></a></b>
+      (Nanotechnology)
+      <br>
+      <i>Mathematical Model</i>
+      <br>
+     Hi everybody! I’m a studying a major in Nanotechnology an Chemistry Science. I am from Guadalajara, a beautiful city in the west of the country. I love to understand the word and ask me questions about the things I am interested in, in order to imagine new ways to do something. I enjoy running and tasting different kinds of desserts. One of my favorite hobbies is teaching. I believe everyone can achieve all if we really love it.
+    </div>
+    <div class="popupContentRight" onclick="closePopup(wrapperJose, backgroundJose, contentJose)"></div>
+  </div>
+<!---------------------------------------------------------- Efrain ------------------------------------------------------>
+  <div class="popupBackground" id="backgroundEfrain">
+  </div>
+  <div class="popupWrapper" id="wrapperEfrain">
+    <div class="popupContentLeft" onclick="closePopup(wrapperEfrain, backgroundEfrain, contentEfrain)"></div>
+    <div class="popupBox popupContent" id="contentEfrain">
+      <button id="closeEfrain" class="closeButton" onclick="closePopup(wrapperEfrain, backgroundEfrain, contentEfrain)">
+        <i class="fa fa-times"></i>
+      </button>
+      <img class="popupImage" src="http://2018.igem.org/wiki/images/d/d3/T--Tec-Monterrey--Foto_Chema.jpg">
+      <b>Efrain</b>      
+      <br>
+      <i>PI</i>
+      <br>
+      Josble for the production of a more efficient procedure for the detection of influenza H1N1 during its pandemic, and the development of a vaccine using bacteria instead of chicken eggs. We thank him for his guidance and support during the project development.
+    </div>
+    <div class="popupContentRight" onclick="closePopup(wrapperEfrain, backgroundEfrain, contentEfrain)"></div>
+  </div>
+<!---------------------------------------------------------- Ivonne ------------------------------------------------------>
+  <div class="popupBackground" id="backgroundIvonne">
+  </div>
+  <div class="popupWrapper" id="wrapperIvonne">
+    <div class="popupContentLeft" onclick="closePopup(wrapperIvonne, backgroundIvonne, contentIvonne)"></div>
+    <div class="popupBox popupContent" id="contentIvonne">
+      <button id="closeIvonne" class="closeButton" onclick="closePopup(wrapperIvonne, backgroundIvonne, contentIvonne)">
+        <i class="fa fa-times"></i>
+      </button>
+      <img class="popupImage" src="">
+      <b>Ivonne</b>
+      <br>
+      <i>Primary PI</i>
+      <br>
+      Cuuhl Autonomous University of Mexico) and a Ph.D. in Systems Biology from the University of Queensland. He gave us access to the laboratory at the beginning of the project. He lent a hand when biological packages arrived to our university and provided us lab materials needed for our project.
+    </div>
+    <div class="popupContentRight" onclick="closePopup(wrapperIvonne, backgroundIvonne, contentIvonne)"></div>
+  </div>
+<!---------------------------------------------------------- Alex ------------------------------------------------------>
+  <div class="popupBackground" id="backgroundAlex">
+  </div>
+  <div class="popupWrapper" id="wrapperAlex">
+    <div class="popupContentLeft" onclick="closePopup(wrapperAlex, backgroundAlex, contentAlex)"></div>
+    <div class="popupBox popupContent" id="contentAlex">
+      <button id="closeAlex" class="closeButton" onclick="closePopup(wrapperAlex, backgroundAlex, contentAlex)">
+        <i class="fa fa-times"></i>
+      </button>
+      <img class="popupImage" src="/images/team/alex.jpg">
+      <b>Alex</b>
+      (Biotechnology)
+      <br>
+      <i>Advisor</i>
+      <br>      
+    </div>
+    <div class="popupContentRight" onclick="closePopup(wrapperAlex, backgroundAlex, contentAlex)"></div>
+  </div>
+<!---------------------------------------------------------- Alan ------------------------------------------------------>
+  <div class="popupBackground" id="backgroundAlan">
+  </div>
+  <div class="popupWrapper" id="wrapperAlan">
+    <div class="popupContentLeft" onclick="closePopup(wrapperAlan, backgroundAlan, contentAlan)"></div>
+    <div class="popupBox popupContent" id="contentAlan">
+      <button id="closeAlan" class="closeButton" onclick="closePopup(wrapperAlan, backgroundAlan, contentAlan)">
+        <i class="fa fa-times"></i>
+      </button>
+      <img class="popupImage" src="/images/team/alan.jpg">
+      <b>Alan Avila Camacho</b>
+      <br>
+      <i>Advisor</i>
+      <br>
+    </div>
+    <div class="popupContentRight" onclick="closePopup(wrapperAlan, backgroundAlan, contentAlan)"></div>
+  </div>
+
+        <div id="div_footer" display="contents"></div>
+        
+        <script>
+          /*********************************************** Popup Javascript *************************************/
+          function openPopup(wrapperName, backgroundName, contentName) {
+            (wrapperName).style.display="flex";
+            (backgroundName).style.display="block";
+            (contentName).style.display="inline-block";
+            setTimeout(function (){
+            (wrapperName).style.opacity="1";
+            (backgroundName).style.opacity="0.8";
+            (contentName).style.opacity="1";
+            }, 200);
+          }
+          function closePopup(wrapperName, backgroundName, contentName) {
+            (wrapperName).style.opacity="0";
+            (backgroundName).style.opacity="0";
+            (contentName).style.opacity="0";
+            setTimeout(function (){
+              (wrapperName).style.display="none";
+              (backgroundName).style.display="none";
+              (contentName).style.display="none";
+            }, 200);
+          }
+        </script>
+    </body>
+</html>

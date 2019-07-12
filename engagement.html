@@ -1,0 +1,269 @@
+<html>
+    <head>
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!----------------------------------------------- Esto va en todas las paginas --------------------------------------------->
+<!------------- Llama todo el css necesario y tiene la función de javascript para llamar al header y footer ---------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+        <title>BIOMOD 2019 Tec de Monterrey</title>
+        <link href="css/reset.css" rel="stylesheet"/>
+        <link href="css/style.css" rel="stylesheet"/>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="css/bootstrapmin.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></script>
+        <script>
+            $(function(){
+                $("#div_header").load("header.html");
+                $("#div_footer").load("footer.html");
+            });
+        </script>
+        <style>
+            .hp-title {
+                position: absolute;
+                top: 10vh;
+                color: white;
+                font-family: "Raleway";
+                font-size: 4vw;
+                margin: 0 30%;
+                z-index: 1;
+                width: 40%;
+                line-height: 1.5em;
+                text-align: center;
+            }
+            .div-image {
+                float: left;
+                width: 25%;
+                height: 100%;
+                text-align: center;
+                overflow: hidden;
+                background: black;
+                position: relative;
+                cursor: pointer;
+            }
+            .div-image img{
+                position: absolute;
+                margin-left: -110%;
+                cursor: pointer;
+                opacity: 0.85;
+                transition: all 0.8s;
+                -webkit-transition: all 0.8s;
+            }
+            .div-image img:hover {
+                opacity: 0.4;
+                margin-left: -50%;
+            }
+            .text-header-HP {
+                font-size: 2.5vw;
+                font-weight: 500;
+                z-index: 1;
+                color: white;
+                margin-top: 49vh;
+            }
+            .container-tab-section {
+                width: 100%;
+                padding: 5%;
+                box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);
+                border-radius: 40px;
+            }
+            .container-tabs {
+                width: 100%;
+                height: 10%;
+                display: flex;
+            }
+            .tab {
+                width: 15%;
+                background: rgba(0,0,0,0.1);
+                text-align: center;
+                margin: 1px;
+            }
+            .tab:hover {
+                cursor: pointer;
+                background: rgba(0,0,0,0.9);
+                color: white;
+            }
+            .container-info-tabs {
+                width: 100%;
+                height: 90%;
+            } 
+            .info-left {
+                width: 40%;
+                height: 100%;
+                float: left;
+                padding: 2%;
+            }
+            .img-right {
+                width: 60%;
+                height: 100%;
+                float: right;
+            }
+            .img-right img {
+                width: 100% !important;
+                height: auto;
+                margin-top: auto;
+                padding: 1%;
+            }
+            .seccion-responsiva video{
+                width: 100%;
+            }
+        </style>
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+    </head>
+    <body>
+        <!-- Conn este div, y su id, javascript de head llama al header.html -->
+        <div id="div_header" display="contents"></div>
+        <!-- Este div no es utilizado por javascript, pero sirve para organizar la pagina -->
+        <div id="page-content" display="contents">
+            <header class="full-masthead" style="height: 100%;" id="page-top">
+                <div class="hp-title">Engagement</div>
+                <div class="div-image" href="#introduction">
+                    <img src="http://2018.igem.org/wiki/images/1/1f/T--Tec-Monterrey--HP_5_header1.jpg">
+                    <div class="text-header-HP">
+                    Introduction
+                    </div>
+                </div>
+                <div class="div-image" href="#social">
+                    <img src="http://2018.igem.org/wiki/images/6/68/T--Tec-Monterrey--HP_5_header2.jpg">
+                    <div class="text-header-HP">
+                    Social
+                    </div>
+                </div>
+                <div class="div-image" href="#educational">
+                    <img src="http://2018.igem.org/wiki/images/1/10/T--Tec-Monterrey--HP_5_header3.jpg">
+                    <div class="text-header-HP">
+                    Educational
+                    </div>
+                </div>
+                <div class="div-image" href="#other">
+                    <img src="http://2018.igem.org/wiki/images/d/d7/T--Tec-Monterrey--HP_5_header4.jpg">
+                    <div class="text-header-HP">
+                    Other
+                    </div>
+                </div>
+            </header>
+            
+            <div class="articulo">
+                <section id="introduction" class="seccion-responsiva">
+                  <div class="introduccion">
+                    <div class="body-title">Introduction</div>
+                    The principles of universality and indivisibility under which human rights are grounded, establish that protection and fundamental rights must be guaranteed for all human beings regardless of ethnicity, age, gender, or income. Today the rights to life and health of agricultural communities, children, farmworkers, animals, and many other vulnerable groups are abused by our excessive reliance on pesticides. There is overwhelming evidence that the use of pesticides in agricultural production and industrial waste have major impact on water quality due to its runoff towards canals, streams, rivers, and lakes. Protection from the exposure to dangerous substances is neither a privilege, nor charity, this is why we emphasize transition to safer and healthier models of agricultural production and waste treatment. This requires adequate approaching to the problem.
+                    <br>
+                    <br>
+                    Monitoring data from pesticides and heavy metals can represent a big problem especially in developing countries, due to the cost of analysis and the need to sample at important times of the year. People often have difficulty carrying out analysis due to impure reagents, inappropriate facilities and financial barriers. It is imperative to find new techniques to reduce costs and increase reliability of the procedures. We’ll briefly describe the activities, meetings, and experiences that built the foundation of our Human Practices.
+                  </div>
+                </section>
+
+                <section id="social" class="seccion-responsiva">
+                  <div class="contenido">
+                    <div class="body-title">Social</div>
+                    Chiapas and Tabasco are homes to the largest indigenous populations in Mexico. These communities have economies primarily based on the cultivation of corn, coffee, mangos, and beans.  A member of our team had been reading Chiapas’ local newspaper for a while and told us something which concerned us all. Hydrological pollution has been present in Southern Mexico due to the incorrect management of urban, industrial, and agrochemical waste. These carelessness for the environment has led to the death of fish, birds and manatees, all within a very short period of time. Furthermore, at least 200 people have been reported to have lacerations and wounds on their skin due to exposure of lead and cadmium.
+                            <br>
+                            <br>
+                    After discussing and pondering the effects of the environmental problematic, we decided to approach stakeholders and the communities affected. A member of our team, Sofía, lived in Chiapas for a very long period of time. She had the first contact with governmental and non-governmental organizations, she travelled to Chiapas with one purpose; to develop the action plan to assess the severity of the problem. 
+                  </div>
+                  <div class="contenido-con-imagen-derecha">
+                    <div class="body-subtitle">Meeting with the Citizen Council of Tuxtla Gutiérrez</div>
+                      <div class="texto-izquierda">
+                        <br>
+                        <br>
+                        Sofía attended a meeting with people from Cecropia, an organization that takes care of global problems at a local scale, Concretos Modernos del Sur, a cement factory and the Environmental and Public Spaces Commission. After discussing the severity of the problem, Cecropia gladly agreed provide coordinates of locations reported to have dangerous concentrations of hazardous compounds such as heavy metals, nitrates, and phosphates.
+                      </div>
+                      <div class="imagen-derecha">
+                        <img src="http://2018.igem.org/wiki/images/a/a7/T--Tec-Monterrey--HP_JuntaTuxtla.jpeg"class="foto">
+                        <br class="clearBoth"/>
+                        <div class="leyenda">Figure 1: Sofía at Café de Chiapas with Juan Carlos Franco and Nancy (CECROPIA), Fernando Ochoa Guillén (Concretos Modernos del Sur), and a representant of the Environmental and Public Spaces Commission.</div>
+                      </div>
+                      <br class="clearBoth"/>
+                  </div>
+                  <div class="contenido-con-imagen-izquierda">
+                    <div class="body-subtitle">Counseling and logistics planning with National Commission of Protected Natural Areas</div>
+                    <div class="texto-derecha">
+                        <br>
+                        <br>
+                        Sofía spoke with Adrián Méndez Barrera, the Regional Director of Southern Frontier, Istmo and South Pacific, and José Velázquez Martínez, Director of the Risk Management unit. They got organized about the sample gathering and the logistics of the journey. After two weeks, they finished planning the trip. It was going to take place on the last week of july. 
+                    </div>
+                      <div class="imagen-izquierda">
+                        <img src="http://2018.igem.org/wiki/images/thumb/3/3a/T--Tec-Monterrey--HP_AdrianMendez.jpg/752px-T--Tec-Monterrey--HP_AdrianMendez.jpg"class="foto">
+                        <br class="clearBoth"/>
+                        <div class="leyenda">Figure 2: Sofía with Adrián Mendez Barrera, Regional Director of CONANP.</div>
+                      </div>
+                      <br class="clearBoth"/>
+                  </div>
+                  <div class="contenido-con-imagen-derecha">
+                    <div class="texto-izquierda">
+                    <br>
+                    <br>
+                    Sofía and José Velázquez Martínez were in contact for two months, gathering information about the coordinates that were going to be analyzed and the best way to make the trip. They set the dates, times and roads for the journey to be as efficient and productive as possible. We must say that without the priceless help of CONANP, this journey would have been possible. Everyone was willing to help and they were happy we had the initiative to assess the environmental problem the community was facing.
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    </div>
+                    <div class="imagen-derecha">
+                        <img src="http://2018.igem.org/wiki/images/a/a8/T--Tec-Monterrey--HP_IngVelazquez.jpg"class="foto">
+                        <br class="clearBoth"/>
+                        <div class="leyenda">Figure 3: Sofía with José Velázquez, Director of the Risk Management unit.</div>
+                    </div>
+                    <div class="contenido">
+                        <div class="body-subtitle">Final Action Plan</div>
+                        Based on the news we have read and the conversations we had, our team decided a small part of it would travel to Chiapas and Tabasco to gather samples from locations provided by people from Cecropia. Not only did we identify the problem, but we decided to get a closer approach and get directly involved. 
+                        <br>
+                        <br>
+                        <video autoplay muted loop class="video-header" type="video/mp4">
+                          <source src="http://2018.igem.org/wiki/images/9/92/T--Tec-Monterrey--HP_mapvideo.mp4">
+                        </video>
+                    </div>
+                  </div>
+                </section>
+                
+              <section id="educational" class="seccion-responsiva">
+                <div class="body-title">Educational</div>
+                <div class="body-subtitle">Tm</div>
+                <ul>
+                  <li>
+                    <b>Luis Javierodina García, Sergio Alexis Espinoza Benavides.</b>
+                    They helped with the design an18.
+                  </li>
+                </ul>
+              </section>
+              
+              <section id="other" class="seccion-responsiva">
+                <div class="body-title">Other</div>
+                <div class="body-subtitle">Taom</div>
+                <ul>
+                  <li>
+                    <b>Luis Javierodina García, Sergio Alexis Espinoza Benavides.</b>
+                    They helped with the design an18.
+                  </li>
+                </ul>
+              </section>
+                
+            </div><!-- Termina articulo -->
+        </div><!-- Termina page-content -->
+        <!-- Conn este div, y su id, javascript de head llama al footer.html -->
+        <div id="div_footer" display="contents"></div>
+    
+          <script>
+            var activeDiv;
+            $(".tab").click(function() {
+              try {
+                $(activeDiv).stop().slideUp(400);
+              } catch (error) {
+                console.error("No active div");
+              }
+              var divID = $(this).attr("href");
+              if (activeDiv != divID) {
+                activeDiv = divID;
+                $(divID).stop().slideDown(400);
+              }
+            });
+                $(".div-image").click(function() {
+                    var divID = $(this).attr("href");
+                    window.location.href = "engagement.html" + divID;
+                });
+          </script>
+    
+    </body>
+</html>

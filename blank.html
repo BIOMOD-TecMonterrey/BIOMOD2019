@@ -1,0 +1,35 @@
+<html>
+    <head>
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!----------------------------------------------- Esto va en todas las paginas --------------------------------------------->
+<!------------- Llama todo el css necesario y tiene la función de javascript para llamar al header y footer ---------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+        <title>BIOMOD 2019 Tec de Monterrey</title>
+        <link href="css/reset.css" rel="stylesheet"/>
+        <link href="css/style.css" rel="stylesheet"/>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="css/bootstrapmin.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></script>
+        <script>
+            $(function(){
+                $("#div_header").load("header.html");
+                $("#div_footer").load("footer.html");
+            });
+        </script>
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------->
+    </head>
+    <body>
+        <!-- Conn este div, y su id, javascript de head llama al header.html -->
+        <div id="div_header" display="contents"></div>
+        <!-- Este div no es utilizado por javascript, pero sirve para organizar la pagina -->
+        <div id="page-content" display="contents">
+            This page is blank
+        </div><!-- Termina page-content -->
+        <!-- Conn este div, y su id, javascript de head llama al footer.html -->
+        <div id="div_footer" display="contents"></div>
+    </body>
+</html>

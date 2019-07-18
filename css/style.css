@@ -71,18 +71,18 @@ a:hover, a:focus, a:active {
  
 @font-face{
     font-family: "Raleway";
-    src: url("BIOMOD2019/fonts/Raleway-Black.ttf");
+    src: url("https://biomod-tecmonterrey.github.io/BIOMOD2019/fonts/Raleway-Black.ttf");
     src: url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap&subset=latin-ext");
 }
 
 @font-face{
     font-family: "RalewayItalic";
-    src: url("BIOMOD2019/fonts/Raleway-BlackItalic.ttf");
+    src: url("https://biomod-tecmonterrey.github.io/BIOMOD2019/fonts/Raleway-BlackItalic.ttf");
 }
 
 @font-face{
     font-family: "Lato";
-    src: url("BIOMOD2019/fonts/Lato-Regular.ttf");
+    src: url("https://biomod-tecmonterrey.github.io/BIOMOD2019/fonts/Lato-Regular.ttf");
     src: url("https://fonts.googleapis.com/css?family=Lato&display=swap&subset=latin-ext");
 }
 

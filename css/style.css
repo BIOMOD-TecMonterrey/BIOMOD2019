@@ -81,9 +81,9 @@ a:hover, a:focus, a:active {
 }
 
 @font-face{
-    font-family: "Yantramanav";
-    src: url("https://biomod-tecmonterrey.github.io/BIOMOD2019/fonts/Yantramanav-Regular.ttf");
-    src: url("https://fonts.googleapis.com/css?family=Yantramanav&display=swap");
+    font-family: "Lato";
+    src: url("https://biomod-tecmonterrey.github.io/BIOMOD2019/fonts/Lato-Regular.ttf");
+    src: url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 }
 
 html {
@@ -107,7 +107,7 @@ body, html {
 }
 
 body {
-    font-family: "Yantramanav", sans-serif !important;
+    font-family: "Lato", sans-serif !important;
     line-height: 1.2em;
 }
 
@@ -260,8 +260,8 @@ h1, h2, h3, h4, h5, h6 {
         background: #404040;
     }
     .footer p{
-        font-family: "Yantramanav", sans-serif !important;
-        font-size: 3vh;
+        font-family: "Lato", sans-serif !important;
+        font-size: 1.7vh;
         text-align: center !important; 
     }
     #footerCopyright{
@@ -273,7 +273,8 @@ h1, h2, h3, h4, h5, h6 {
     .social-link.fa {
         color: #eeeeee;
         opacity: 0.5;
-        font-size: 6vw;
+        font-size: 3vw; 
+        padding-left: 0.3rem;
         transition: all 0.4s;
         -webkit-transition: all 0.4s;
     }
@@ -293,7 +294,7 @@ h1, h2, h3, h4, h5, h6 {
 /***********************************************************************************************************************/
 
 .articulo {
-  font-size: 0.5vw;
+  font-size: 1vw;
   background: url(http://2018.igem.org/wiki/images/c/c2/T--Tec-Monterrey--Background_Trail.jpg);
   background-size: contain;
   background-repeat-y: repeat;

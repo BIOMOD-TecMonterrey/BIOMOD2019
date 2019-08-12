@@ -393,11 +393,11 @@ h1, h2, h3, h4, h5, h6 {
 /******************************************** RESIZING CONTENTS ON SCREEN SIZE *************************************/
 @media screen and (max-width: 900px) {
   .articulo {
-    font-size: 3vh;
+    font-size: 2vh;
     line-height: 1.2em;
   }
   .body-title {
-    font-size: 6vh;
+    font-size: 4vh;
   }
   .body-subtitle {
     font-size: 4vh;
@@ -428,10 +428,12 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
   }
   .leyenda {
-    font-size: 2vh;
+    font-size: 1.5vh;
   }
   .social-link.fa {
-    font-size: 10vw;
+    font-size: 6vw;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
   }
   .sponsor {
     height: 10vw;

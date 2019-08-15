@@ -78,6 +78,7 @@ a:hover, a:focus, a:active {
 @font-face{
     font-family: "MontserratItalic";
     src: url("https://biomod-tecmonterrey.github.io/BIOMOD2019/fonts/Montserrat-ExtraBoldItalic.ttf");
+    src: url("https://fonts.googleapis.com/css?family=Montserrat:800&display=swap");
 }
 
 @font-face{

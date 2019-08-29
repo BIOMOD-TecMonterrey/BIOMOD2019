@@ -60,7 +60,7 @@ a:hover, a:focus, a:active {
 }
 
 .btn {
-    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
     font-weight: 700;
 }
 
@@ -132,7 +132,6 @@ h1, h2, h3, h4, h5, h6 {
 .masthead {
     height: 100%;
     width: 100%;
-    box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);
 }
 
 .header-top {
@@ -295,7 +294,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .articulo {
   font-size: 1vw;
-  background: url(https://github.com/BIOMOD-TecMonterrey/BIOMOD2019/blob/master/images/otras/fondostrandsgrande.png?raw=true);
+  background: url(https://github.com/BIOMOD-TecMonterrey/BIOMOD2019/blob/master/images/otras/fondostrandsunidas.png?raw=true);
   background-size: contain;
   background-repeat-y: repeat;
   background-repeat-x: no-repeat;
@@ -306,14 +305,22 @@ h1, h2, h3, h4, h5, h6 {
   background: white;
   margin: 0.5% auto;
   padding: 2% 5%;
-  border-radius: 40px;
+  border-bottom: 5px solid rgba(237,220,218, .3);
+  border-radius: 2px;
   line-height: 1.4em;
-  box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);
+}
+.seccion-video {
+  width: 80%;
+  background: white;
+  margin: 0.5% auto;
+  padding: 2% 5%;
+  border-radius: 2px;
+  line-height: 1.4em;
 }
 .seccion-responsiva a {
   color: #377bbf;
   margin: 0;
-  font-size: 1.2em;
+  font-size: 1.2em;*
   padding: 0 !important;
 }
 .resumen > .body-title {

@@ -205,7 +205,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .body-title {
     font-family: "Montserrat", sans-serif !important;
-    font-size: 4vw;
+    font-size: 2vw;
     font-weight: 600 !important;
     line-height: 1em;
     padding: 10px 0 10px 0;
@@ -335,7 +335,7 @@ h1, h2, h3, h4, h5, h6 {
 .contenido {
 }
 .leyenda {
-  font-size: 1.4vw;
+  font-size: 0.8vw;
 }
 .contenido-con-imagen-derecha, .contenido-con-imagen-izquierda {
   height: auto;
@@ -492,8 +492,8 @@ h1, h2, h3, h4, h5, h6 {
   height: 1em;
   margin: auto;
   font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 1.5vw;
+  font-weight: 500;
+  font-size: 1.3vw;
   line-height: 1em;
   border-right: 1px solid white;
 }
@@ -560,7 +560,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  font-size: 1.8vw;
+  font-size: 1.3vw;
   color: black;
   text-decoration: none;
   padding-top: 10px;
@@ -571,9 +571,10 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   position: relative;
   color: black;
-  font-size: 1.5vw;
+  font-size: 1.1vw;
   line-height: 1.5em;
   text-decoration: none;
+  padding-top: 3px;
   width: auto;
 }
 

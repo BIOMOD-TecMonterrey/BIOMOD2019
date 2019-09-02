@@ -511,7 +511,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar-linkContainer.active {
   transform: scale(1.05,1.05);
-  border-radius: 5%;
+  border-radius: 2%;
   background-color: #c2493d;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -643,7 +643,7 @@ a.navbarItemHeader:hover::after, a.navbarItemContent:hover::after  {
         -o-transition: all 0.4s ease 0s;
         transition: all 0.4s ease 0s;
         transform: translateX(300px);
-        background: #71706e;
+        background: rgba(46, 42, 38,0.8);
     }
     .sidebar-nav {
         position: absolute;
@@ -671,7 +671,7 @@ a.navbarItemHeader:hover::after, a.navbarItemContent:hover::after  {
         margin: 0;
         padding: 10px;
         color: #fff;
-        background: #990303;
+        background: #2e2a26;
         padding: 0px;
     }
     .sidebar-nav li a:hover {

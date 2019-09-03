@@ -189,7 +189,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1em;
     padding-bottom: 0;
     margin-bottom: -5px;
-    color: darkred;
+    color: #c2493d;
 }
 
 .header-subtitle {
@@ -200,6 +200,18 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1em;
     padding-bottom: 4px;
     color: #ffffff;
+}
+
+.design-title {
+    font-family: "Montserrat", sans-serif !important;
+    text-align: left !important;
+    font-size: 9vw;
+    font-weight: 700 !important;
+    line-height: 1em;
+    padding-bottom: 0;
+    margin-bottom: -5px;
+    color: #c2493d;
+    
 }
 
 @supports (-webkit- backdrop-filter: none) or (backdrop-filter: none) {

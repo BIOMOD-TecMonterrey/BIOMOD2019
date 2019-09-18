@@ -507,8 +507,9 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   float: left;
   text-align: center;
-  cursor: default;
+  cursor: pointer;
 }
+
 .navbar-linkContainerChild {
   position: absolute;
   top: 0;

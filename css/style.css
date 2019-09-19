@@ -116,7 +116,8 @@ ul{
 }
 
 ul.b {
-    margin-left: 2em;
+    margin-left: 3em;
+    list-style-type: disc;
 }
 
 ol{

@@ -113,6 +113,12 @@ body {
 
 ul{
     margin: 0 !important;
+    list-style-position: inside;
+}
+
+ol{
+    list-style-position: inside;
+    list-style-type: decimal;
 }
 
 h1, h2, h3, h4, h5, h6 {

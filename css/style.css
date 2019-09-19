@@ -113,10 +113,14 @@ body {
 
 ul{
     margin: 0 !important;
-    list-style-position: inside;
+}
+
+ul.b {
+    margin: 1em;
 }
 
 ol{
+    margin: 1em;
     list-style-position: inside;
     list-style-type: decimal;
 }

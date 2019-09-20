@@ -236,8 +236,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .body-title {
     font-family: "Montserrat", sans-serif !important;
-    font-size: 3vw;
-    font-weight: 600 !important;
+    font-size: 2vw;
+    font-weight: 500 !important;
     line-height: 1em;
     padding: 10px 0 10px 0;
     text-align: center;

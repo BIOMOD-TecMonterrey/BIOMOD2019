@@ -84,10 +84,11 @@
             </header>
             <div class="articulo">
                 <section id="background" class="seccion-responsiva">
-                    <div class="body-title">Background</div>
+                    <a name="background"><div class="body-title">Background</div></a>
                     <br>
-                        <div class ="body-subtitle">DNA Origami</div>
+                        <a name="dna-origami"><div class ="body-subtitle">DNA Origami</div></a>
                             “DNA is the polymer that scientists dream about” [1]. Besides containing all human genetic information, its physical properties make it perfect to build nanoscale structures due to the following:  
+                    <br>
                     <br>
                                 <ol>
                                     <li style="text-indent: 2em">Watson-Crick base pairing complementarity</li>
@@ -100,15 +101,15 @@
                             Building beautiful, complex and functional structures by folding a piece of paper is much more transcendental than the macroscale art we all know as origami. In 2006, Paul Rothemund discovered a way in which DNA, the molecule of life, could be adapted into the Japanese technique of origami.
                     <br>
                             The culmination of this discovery made scientists acknowledge that DNA Origami is one of the most powerful forms of DNA nanotechnology. The technique consists of folding a long strand of ssDNA (scaffold) using small oligonucleotides (staples) complementary to specific sections of the scaffold; achieving the construction of two and three dimensional structures [3] that can be potentially used in the areas of nanomedicine, physics, supramolecular chemistry and others. 
-                        <div class="body-subtitle">Strand Displacement</div>
+                        <a name="strand-displacement"><div class="body-subtitle">Strand Displacement</div></a>
                             Strand displacement is a mechanism applied in the field of DNA Origami that allows DNA structures to be more dynamic and versatile. Also known as “toehold-mediated strand displacement”, the mechanism consists of replacing one strand in a double helix with another one, the resulting double helix will be more stable and favorable in terms of free energy than the initial one.
-                        <div class="body-subtitle">DNA-RNA Hybrids </div>
+                        <a name="dna-rna"><div class="body-subtitle">DNA-RNA Hybrids </div></a>
                             In human biology, RNA plays a vital role as a molecule of life. Part of this is due to its structure and chemical properties. Yet, it is also because its complexity that molecular RNA de novo design and engineering is limited [4]. As a solution, folding RNA has been proposed as an adaptation of the DNA origami technique. 
                     <br>
                             DNA-RNA hybridization attempts to give DNA nanotechnology a new field of application and functionality. The folding process of the RNA follows the same principles of DNA origami [5]; the complementarity between two strands, in this case, RNA and DNA. And similarly, RNA-DNA origami relies on protocols already used for nucleic-acid self-assembly.
                     <br>
                             Distinct works have been developed in this area. There have been studies of the possible methodologies to hybridize these two molecules into complex non-functional nanostructures [4]. It has also been applied to construct RNA-DNA as siRNA delivery [6]. 
-                        <div class="body-subtitle">mRNA Therapy </div>
+                        <a name="mrna-therapy"><div class="body-subtitle">mRNA Therapy </div></a>
                             <div class= "body-subsubtitle">what is mRNA?</div>
                                 To answer this question, it is important to define what a protein is. A protein is a “workhorse” of the cell [7], they carry out vital functions of life; enzymes, hormones, antibodies, they are all proteins.
                     <br>
@@ -147,7 +148,7 @@
 
 
                 <section id="design" class="seccion-responsiva">
-                    <div class="body-title">Design</div>
+                    <a name="design"><div class="body-title">Design</div></a>
                     <div class="body-subtitle">The problem</div> 
                         Our project is based on the idea the mRNA needs to be stabilized inside the human body in order to be delivered as a drug. 
                     <br>
@@ -164,16 +165,12 @@
                         <img src="http://2018.igem.org/wiki/images/8/85/T--Tec-Monterrey--RT_parts.png"> 
                     </div> 
 
-                    <div class="body-subtitle">Wild Type Cas1 Protein: BBa_K2761001</div>
-                        Gene sequence for the expression of Cas1 from Escherichia coli in its wild type form. This protein is one of the two Cas proteins responsible for new DNA spacer acquisition in the bacteria's CRISPR locus (array). This action is done by a protein complex hexamere made up of 4 Cas1 dimers and 2 Cas2 dimers. It has been shown that these proteins are commonly conserved across the major types of CRISPR-Cas systems. To properly use Cas1 protein it should be expressed along with Cas2 protein and a PAM sequence found in the msDNA in the system design for spacer acquisition. The Cas1 protein gene contained in this part expresses the protein without any tag for further identification.
-                    <div class="imagen-centrada-reducida">
-                        <img src="http://2018.igem.org/wiki/images/0/03/T--Tec-Monterrey--Cas1.png"> 
-                    </div> 
-                        Protein gene for the expression of Cas2 from Escherichia coli in its wild type form. The basic part includes Cas2 protein from Escherichia coli. This protein is one of the two Cas proteins responsible for new DNA spacer acquisition in the bacteria's CRISPR locus (array). This action is done by a protein complex hexamere made up of 4 Cas1 dimers and 2 Cas2 dimers. It has been shown that these proteins are commonly conserved across the major types of CRISPR-Cas systems. To properly use Cas2 protein it should be expressed along with Cas1 protein and a PAM sequence found in the msDNA in the system design for spacer acquisition. The Cas2 protein gene contained in this part expresses the protein without any tag for further identification
-                    <div class="imagen-centrada-reducida">
-                        <img src="http://2018.igem.org/wiki/images/4/4b/T--Tec-Monterrey--Cas2.png"> 
-                    </div> 
-                    <div class="body-subtitle">Cas1 Protein with Flag: BBa_K2761003</div>
+                    <div class="body-subtitle">Solution</div>
+                        Our proposal is to build a hybridized mRNA-DNA tetrahedron that, when a set of anti-staples are injected, will release the mRNA strand by strand-displacement mechanism.
+                    <br>
+                        In our structure, the mRNA and DNA strands act as the scaffold and the staples respectively. The staples will have a toehold that will hybridize to the anti-staples. And so, the RNA scaffold will be released when the later ones are injected. 
+
+                    <div class="body-subtitle">Tetrahedron</div>
 
                         Protein coding gene for the expression of Cas1 from Escherichia coli including a FLAG tag for its identification and purification. This protein is one of the two Cas proteins responsible for new DNA spacer acquisition in the bacteria's CRISPR locus. This action is done by a protein complex hexamere made up of 4 Cas1 proteins and 2 Cas2 proteins. It has been shown that these proteins are commonly conserved across the major types of CRISPR-Cas systems. To properly use Cas1 protein it should be expressed along with Cas2 protein and a PAM sequence found in the msDNA in the system design for spacer acquisition. The Cas1 protein gene contained in this part expresses the protein with a tag sequence (FLAG) for further identification and purification. 
                     <div class="imagen-centrada-reducida">
@@ -200,7 +197,7 @@
 
 
                 <section id="model" class="seccion-responsiva">
-                    <div class="body-title">Model</div>
+                    <a name="math-model"><div class="body-title">Mathematical Model</div></a>
                     <div class="body-subtitle">Ne</div>
                        The composite parts BBa_K2761007 and BBa_K2761009 hold an IPTG-inducible promoter regulating the expression of each Cas1 and Cas2 proteins. The first part produces each protein with a FLAG and HA tags, respectively, the second one produces them as wild-type proteins. The expression of the proteins was characterized, quantifying them with a gradient of inductor concentration and under different induction times. These are new characterized parts for Silver requirements. The characterization of the part can be found in the Demonstrate segment. 
                     <br>
@@ -223,7 +220,7 @@
                 </section>
 
                 <section id="goals" class="seccion-responsiva">
-                    <div class="body-title">Goals</div>
+                    <a name="goals"><div class="body-title">Goals</div></a>
                     <br>
                        E-coding design a set of composite parts that enable the recording of stimuli from environment and culture conditions in the bacterial genome. The SCRIBE system together with the CAS1-CAS2 complex enables the integration of any designed sequence in the CRISPR-array. The project expects that the following collection of parts can be used in any type of bacteria for molecular recording of events. In this case, all experimentation was base in strain <i>.BL21</i> (DE3) Further experimentation in other types of strain is encouraged. 
                      <ol>

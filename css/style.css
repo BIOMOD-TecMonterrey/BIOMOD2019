@@ -234,12 +234,33 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.button {
+  border-radius: 4px;
+  background-color: white;
+  border: #c2493d;
+  color: #c2493d;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration:  0.4s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button:hover {
+  background-color: #c2493d;
+  border: none;
+  color: white;
+}
+
 .body-title {
     font-family: "Montserrat", sans-serif !important;
     font-size: 2vw;
     font-weight: 500 !important;
     line-height: 1em;
-    padding: 10px 0 10px 0;
+    padding: 10px 0 5px 0;
     text-align: center;
 }
 
@@ -611,6 +632,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.3vw;
   color: black;
   text-decoration: none;
+  text-transform: uppercase;
   padding-top: 10px;
   width: auto;
 }
@@ -622,6 +644,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.1vw;
   line-height: 1.5em;
   text-decoration: none;
+  text-transform: lowercase;
   padding-top: 3px;
   width: auto;
 }

@@ -152,59 +152,6 @@
             }
         );
 
-        $("#linkContainer_LB").hover(
-            function () {
-                $('#navbar').css('background','#2e2a26');
-                $("#linkContainer_LB").addClass("active");
-                $("#linkContainer_LBChild").addClass("activeChild");
-                openMenu('#collapseLB', '#e2e2e2');
-            }, function () {
-                colorNavbar();
-                $("#linkContainer_LB").removeClass("active");
-                $("#linkContainer_LBChild").removeClass("activeChild");
-                closeMenu('#collapseLB');
-
-                $('#collapseLB').mouseenter(function(){
-                    $('#navbar').css('background','#2e2a26');
-                    $("#linkContainer_LB").addClass("active");
-                    $("#linkContainer_LBChild").addClass("activeChild");
-                    openMenu('#collapseLB', '#e2e2e2');
-                });
-                $('#collapseLB').mouseleave(function(){
-                    colorNavbar();
-                    $("#linkContainer_LB").removeClass("active");
-                    $("#linkContainer_LBChild").removeClass("activeChild");
-                    closeMenu('#collapseLB');
-                });
-            }
-        );
-
-        $("#linkContainer_Engagement").hover(
-            function () {
-                $('#navbar').css('background','#2e2a26');
-                $("#linkContainer_Engagement").addClass("active");
-                $("#linkContainer_EngagementChild").addClass("activeChild");
-                openMenu('#collapseEngagement', '#e2e2e2');
-            }, function () {
-                colorNavbar();
-                $("#linkContainer_Engagement").removeClass("active");
-                $("#linkContainer_EngagementChild").removeClass("activeChild");
-                closeMenu('#collapseEngagement');
-
-                $('#collapseEngagement').mouseenter(function(){
-                    $('#navbar').css('background','#2e2a26');
-                    $("#linkContainer_Engagement").addClass("active");
-                    $("#linkContainer_EngagementChild").addClass("activeChild");
-                    openMenu('#collapseEngagement', '#e2e2e2');
-                });
-                $('#collapseEngagement').mouseleave(function(){
-                    colorNavbar();
-                    $("#linkContainer_Engagement").removeClass("active");
-                    $("#linkContainer_EngagementChild").removeClass("activeChild");
-                    closeMenu('#collapseEngagement');
-                });
-            }
-        );
 
         $("#navbarLogoWrapper").click(function() {
             window.location.href = "http://2018.igem.org/Team:Tec-Monterrey";

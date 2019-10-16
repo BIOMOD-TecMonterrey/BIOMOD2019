@@ -442,8 +442,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 .imagen-centrada-reducida > img {
   width: 80%;
-  margin-left: auto%;
-  margin-right: auto%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .imagen-centrada-reducida > .leyenda {
   text-align: center;

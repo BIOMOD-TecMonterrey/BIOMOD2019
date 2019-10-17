@@ -772,7 +772,7 @@ a.navbarItemHeader:hover::after, a.navbarItemContent:hover::after  {
         height: 78px;
         margin: 0;
         padding: 0;
-        background: #990303;
+        background: #c2493d;
         position: absolute;
         left: 0;
         top: 1px;

@@ -163,8 +163,7 @@ h1, h2, h3, h4, h5, h6 {
 .header-bottom {
     height: 30%;
     position: relative;
-    background: #71706e;
-    padding: 10px 0px 10px 10px; 
+    background: transparent;
     margin: 0px 0px 0px 0px;"
 }
 
@@ -213,6 +212,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1em;
     padding-bottom: 4px;
     color: #ffffff;
+    background: transparent;
 }
 
 .design-title {

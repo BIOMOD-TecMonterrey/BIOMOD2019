@@ -109,7 +109,35 @@
                 });
             }
         );
+        
+        $("#linkContainer_Labbook").hover(
+            function () {
+                $('#navbar').css('background','#2e2a26');
+                $("#linkContainer_Labbook").addClass("active");
+                $("#linkContainer_LabbookChild").addClass("activeChild");
+                openMenu('#collapseLabbook', '#e2e2e2');
+            }, function () {
+                colorNavbar();
+                $("#linkContainer_Labbook").removeClass("active");
+                $("#linkContainer_LabbookChild").removeClass("activeChild");
+                closeMenu('#collapseLabbook');
 
+                $('#collapseLabbook').mouseenter(function(){
+                    $('#navbar').css('background','#2e2a26');
+                    $("#linkContainer_Labbook").addClass("active");
+                    $("#linkContainer_Labbook").addClass("activeChild");
+                    openMenu('#collapseLabbook', '#e2e2e2');
+                });
+                $('#collapseLabbook').mouseleave(function(){
+                    colorNavbar();
+                    $("#linkContainer_Labbook").removeClass("active");
+                    $("#linkContainer_LabbookChild").removeClass("activeChild");
+                    closeMenu('#collapseLabbook');
+                });
+            }
+        );
+            
+            
         $("#linkContainer_People").hover(
             function () {
                 $('#navbar').css('background','#2e2a26');

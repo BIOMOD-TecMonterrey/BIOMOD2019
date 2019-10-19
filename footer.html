@@ -110,29 +110,29 @@
             }
         );
         
-        $("#linkContainer_Labbook").hover(
+        $("#linkContainer_LB").hover(
             function () {
                 $('#navbar').css('background','#2e2a26');
-                $("#linkContainer_Labbook").addClass("active");
-                $("#linkContainer_LabbookChild").addClass("activeChild");
-                openMenu('#collapseLabbook', '#e2e2e2');
+                $("#linkContainer_LB").addClass("active");
+                $("#linkContainer_LB").addClass("activeChild");
+                openMenu('#collapseLB', '#e2e2e2');
             }, function () {
                 colorNavbar();
-                $("#linkContainer_Labbook").removeClass("active");
-                $("#linkContainer_LabbookChild").removeClass("activeChild");
-                closeMenu('#collapseLabbook');
+                $("#linkContainer_LB").removeClass("active");
+                $("#linkContainer_LB").removeClass("activeChild");
+                closeMenu('#collapseLB');
 
-                $('#collapseLabbook').mouseenter(function(){
+                $('#collapseLB').mouseenter(function(){
                     $('#navbar').css('background','#2e2a26');
-                    $("#linkContainer_Labbook").addClass("active");
-                    $("#linkContainer_Labbook").addClass("activeChild");
-                    openMenu('#collapseLabbook', '#e2e2e2');
+                    $("#linkContainer_LB").addClass("active");
+                    $("#linkContainer_LB").addClass("activeChild");
+                    openMenu('#collapseLB', '#e2e2e2');
                 });
-                $('#collapseLabbook').mouseleave(function(){
+                $('#collapseLB').mouseleave(function(){
                     colorNavbar();
-                    $("#linkContainer_Labbook").removeClass("active");
-                    $("#linkContainer_LabbookChild").removeClass("activeChild");
-                    closeMenu('#collapseLabbook');
+                    $("#linkContainer_LB").removeClass("active");
+                    $("#linkContainer_LB").removeClass("activeChild");
+                    closeMenu('#collapseLB');
                 });
             }
         );

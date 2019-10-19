@@ -356,7 +356,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .articulo {
   font-size: 1vw;
-  background: url(https://biomod-tecmonterrey.github.io/BIOMOD2019/images/otras/fondostrandsunidas.png);
+  background: url(https://biomod-tecmonterrey.github.io/BIOMOD2019/images/otras/trailclaro.png);
   background-size: contain;
   background-repeat-y: repeat;
   background-repeat-x: no-repeat;
@@ -367,8 +367,7 @@ h1, h2, h3, h4, h5, h6 {
   background: white;
   margin: 0.5% auto;
   padding: 2% 5%;
-  border-bottom: 5px solid rgba(237,220,218, .3);
-  border-radius: 2px;
+  border-bottom: 5px solid #eeeff1;
   line-height: 1.4em;
 }
 .seccion-video {

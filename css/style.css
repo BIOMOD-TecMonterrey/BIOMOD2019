@@ -468,6 +468,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 .referencias {
 }
+
+.fondoscuro {
+    width: 100%;
+    background-color: ;
+    color: #eeeff1 !important ;
+}
+
+.fondoclaro {
+    width: 100%;
+    background-color: #eeeff1;
+}
 /******************************************** RESIZING CONTENTS ON SCREEN SIZE *************************************/
 @media screen and (max-width: 900px) {
   .articulo {

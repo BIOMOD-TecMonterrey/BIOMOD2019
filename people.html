@@ -389,6 +389,11 @@
                 </div>
                 Esteban de la Peña 
               </div>
+              <div class="member" onclick="openPopup(wrapperKalaumari, backgroundKalaumari, contentKalaumari)">
+                <div class="photo" id="Kalaumari">
+                </div>
+                Kalaumari Mayoral 
+              </div>
             </div>
           </section>
 
@@ -397,11 +402,6 @@
             Collaborators
             </div></a>
             <div class="containerMembers">
-              <div class="member" onclick="openPopup(wrapperKalaumari, backgroundKalaumari, contentKalaumari)">
-                <div class="photo" id="Kalaumari">
-                </div>
-                Kalaumari Mayoral
-              </div>
               <div class="member" onclick="openPopup(wrapperDavid, backgroundDavid, contentDavid)">
                 <div class="photo" id="Camilo">
                 </div>
@@ -697,7 +697,26 @@ Hi! I’m Isaac García, and I really love science. My main role in the team was
     </div>
     <div class="popupContentRight" onclick="closePopup(wrapperAlan, backgroundAlan, contentAlan)"></div>
   </div>
-              
+
+<!---------------------------------------------------------- Kalaumari ------------------------------------------------------>
+  <div class="popupBackground" id="backgroundKalaumari">
+  </div>
+  <div class="popupWrapper" id="wrapperKalaumari">
+    <div class="popupContentLeft" onclick="closePopup(wrapperKalaumari, backgroundKalaumari, contentKalaumari)"></div>
+    <div class="popupBox popupContent" id="contentKalaumari">
+      <button id="closeKalaumari" class="closeButton" onclick="closePopup(wrapperKalaumari, backgroundKalaumari, contentKalaumari)">
+        <i class="fa fa-times"></i>
+      </button>
+      <img class="popupImage" src="https://biomod-tecmonterrey.github.io/BIOMOD2019/images/team/kalaumari.jpg">
+      <b>Kalaumari Mayoral Peña<a href= "https://www.linkedin.com/in/kalaumari-mayoral-pe%C3%B1a-48a49071/" target="_blank"><i class="fa fa-linkedin-square"></i></a></b>
+      (Biotechnology)
+      <br>
+      <i>Advisor</i>
+      <br>
+        I have a BS in Nanotechnology. During my undergraduate studies, I led diverse projects with a main focus on science dissemination and development of technology. At this time I'm doing research in Tissue Engineering and Biomaterials at Brigham and Women's Hospital in Harvard Medical School. I'm extremely motivated in helping young students to develop state-of-art projects in Mexico and Latin America.
+    </div>
+    <div class="popupContentRight" onclick="closePopup(wrapperAlan, backgroundAlan, contentAlan)"></div>
+  </div>              
               
 </div>              
         <div id="div_footer" display="contents"></div>

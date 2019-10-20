@@ -370,7 +370,6 @@ h1, h2, h3, h4, h5, h6 {
   background-repeat-y: repeat;
   background-repeat-x: no-repeat;
   text-align: justify;
-  z-index: 99;
 }
 .seccion-responsiva {
   width: 80%;
@@ -468,7 +467,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .referencias {
 }
-
+/*******
 .fondoscuro {
     width: 100%;
     background-color: #050706 !important;
@@ -479,7 +478,7 @@ h1, h2, h3, h4, h5, h6 {
 .fondoclaro {
     width: 100%;
     background-color: #eeeff1;
-}
+}*******/
 /******************************************** RESIZING CONTENTS ON SCREEN SIZE *************************************/
 @media screen and (max-width: 900px) {
   .articulo {

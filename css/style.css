@@ -472,6 +472,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     background-color: #050706 !important;
     color: #eeeff1 !important;
+    margin-bottom: auto;
 }
 
 .fondoclaro {
